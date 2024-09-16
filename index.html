@@ -5,7 +5,6 @@
     <script type="text/javascript" src="sistema.js"></script>
     <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>AgroFala</title>
 </head>
 <body>
@@ -13,25 +12,40 @@
         <header>
             <h1>AgroFala</h1>
         </header>
-        
-        
-      
-            <h3>Menu Principal:</h3>
-			<ul type="I" start="12">
-				<li><a href="index.html">Início</a></li>
-				<li><a href="produtos.html">pesquisa</a></li>
-				<li><a href="sobre.html">Sobre Nós</a></li>
+
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
 
-			</ul>
-        
-        
-        
+        <!-- Barra de pesquisa -->
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar no AgroFala...">
+            <input type="submit" value="Pesquisar">
+        </div>
+
+        <!-- Área de postagem agrícola -->
+        <div class="post-agriculture-area">
+            <h2>Compartilhe sua experiência agrícola</h2>
+            <form id="agriculturePostForm">
+                <label for="postTitle">Título:</label>
+                <input type="text" id="postTitle" name="postTitle" placeholder="Título da postagem" required>
+                
+                <label for="postDescription">Descrição:</label>
+                <textarea id="postDescription" name="postDescription" placeholder="Descreva sua experiência agrícola..." rows="6" required></textarea>
+                
+                <label for="postImage">Imagem:</label>
+                <input type="file" id="postImage" name="postImage" accept="image/*">
+                
+                <button type="submit">Publicar</button>
+            </form>
+        </div>
+
         <div id="output"></div>
-        
-      
-    
     </div>
-
 </body>
 </html>

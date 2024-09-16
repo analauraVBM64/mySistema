@@ -1,72 +1,184 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #eed382;/*bege*/
+    font-family: 'Arial', sans-serif;
+    background-color: #eed382; /* Bege */
     margin: 0;
     padding: 0;
-}
-
-/* Estilo para o contêiner principal */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    color: #333;
 }
 
 /* Estilo para o cabeçalho */
 header {
-    background-color: #5c6206;/*verde*/
+    background-color: #5c6206; /* Verde */
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Estilo para o título */
+/* Estilo para o título principal */
 h1 {
     margin: 0;
     font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-
-/* Estilo para os títulos das seções */
-h2 {
-    font-size: 24px;
-}
-
-/* Estilo para os parágrafos */
-p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Estilo para as imagens */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-form#signupForm {
-    background-color: #FFA500;
-    color: #fff;
+/* Estilo para o menu */
+h3 {
     text-align: center;
-    padding: 3px ;
-    padding-left: 1px;
-    padding-right: 4px;
+    font-size: 24px;
+    color: #5c6206; /* Verde escuro para o título do menu */
+    margin-bottom: 20px;
 }
-/* Estilo botão*/
-button{
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    background-color: #faba04; /* Amarelo */
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ul li:hover {
+    background-color: #5c6206; /* Verde escuro no hover */
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+}
+
+/* Estilo para o formulário de pesquisa */
+.search-bar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px 20px;
+    width: 75%;
+    border: 2px solid #5c6206; /* Verde */
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #4CAF50; /* Cor diferente no foco */
+    outline: none;
+}
+
+.search-bar input[type="submit"] {
+    padding: 12px 25px;
+    background-color: #5c6206; /* Verde */
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.search-bar input[type="submit"]:hover {
+    background-color: #4CAF50; /* Verde mais claro no hover */
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+textarea{
+    margin: 20px;
+}
+
+.post-agriculture-area {
+    border-radius: 10px; /* Bordas arredondadas */
     padding: 10px;
-    background-color: transparent;
-    border: transparent;
-    color: #fff;
+    margin-left: 400px;
+    margin-right: 400px;
+
 }
-/* Estolo menu*/
-li {
-	display: inline-block;
-	background-color: #faba04;/*amarelo*/
-	padding: 10px;
-	margin: 3px;
-	border-radius: 10px;
-	transition: all 1s;
+
+.post-agriculture-area h2 {
+    font-size: 28px;
+    color: #5c6206; /* Verde */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.post-agriculture-area form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-agriculture-area label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #5c6206; /* Verde */
+    width: 100%;
+    text-align: left;
+}
+
+.post-agriculture-area input[type="text"],
+.post-agriculture-area textarea,
+.post-agriculture-area input[type="file"] {
+    background-color: #fff;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #5c6206; /* Verde */
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-agriculture-area button {
+    padding: 12px 25px;
+    background-color: #5c6206; /* Verde */
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.post-agriculture-area button:hover {
+    background-color: #4CAF50; /* Verde mais claro no hover */
+}
+
+.nome{
+    font-size: 20px;
+    margin-right: 450px;
+    margin-left: 30px;
 }
