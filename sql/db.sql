@@ -15,3 +15,8 @@ CREATE TABLE postagem (
     descricao VARCHAR(300),
     imagem BLOB
 );
+
+CREATE TABLE login(
+    id INT AUTP_INCREMENT PRIMARY KEY,
+    nome
+)

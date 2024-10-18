@@ -13,6 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Obter dados do formulário
+$name = $_POST['name'];
 $nome = $_POST['username'];
 $email = $_POST['email'];
 $senha = $_POST['password'];

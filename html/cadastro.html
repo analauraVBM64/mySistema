@@ -12,14 +12,21 @@
     <h1>AgroFala</h1>
   </header>
   
+ <!-- Menu de navegação -->
+ <nav>
   <ul type="I" start="12">
-    <a href="index.html"><li>Início</li></a>
-    <a href="sobre.html"><li>Sobre Nós</li></a>
-    <a href="login.html"><li> Login</li></a>
-  </ul>
+      <a href="index.html"><li>Início</li></a>
+      <a href="sobre.html"><li>Sobre Nós</li></a>
+      <a href="login.html"><li> Login</li></a>
+      <a href="publicacao.html"><li>Públicar</li></a>
+
+    </ul>
+</nav>
 
   <h2>Criar Conta</h2>
   <form id="signupForm" action="processar_cadastro.php" method="post">
+    <label for="username">Nome Completo:</label>
+    <input type="text" id="name" name="name" required><br><br>
     <label for="username">Nome de Usuário:</label>
     <input type="text" id="username" name="username" required><br><br>
     <label for="email">E-mail:</label>
