@@ -6,7 +6,7 @@ CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(25) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    senha VARCHAR(255) NOT NULL
+    senha VARCHAR(25) NOT NULL
 );
 
 CREATE TABLE postagem (
@@ -17,6 +17,13 @@ CREATE TABLE postagem (
 );
 
 CREATE TABLE login(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email INT NOT NULL,
+    senha INT NOT NULL,
+    FOREIGN KEY (usuarios) REFERENCES usuarios(id)
+);
+
+CREATE TABLE pesquisa(
     id INT AUTP_INCREMENT PRIMARY KEY,
-    nome
+    tema VARCHAR(25) NOT NULL
 )
